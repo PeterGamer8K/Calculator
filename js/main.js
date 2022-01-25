@@ -10,7 +10,7 @@ main();
 function main() {
 
 
-    prepareButtons();
+    prepareButtonsAndAddListeners();
 
 
 }
