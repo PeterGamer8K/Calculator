@@ -4,49 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <div class="fundo">
-        <div class="calculadora">
-            <h1>Calculadora</h1>
+    <div class="background">
+        <div class="calculator">
+            <h1>Calculator</h1>
             <p id="result"></p>
             <table>
                 <tr>
-                    <td><button id="btn-C" class="botao">C</button></td>
-                    <td><button id="btn-backspace" class="botao"><</button></td>
-                    <td><button id="btn-divider" class="botao">/</button></td>
-                    <td><button id="btn-multiplier" class="botao">X</button></td>
+                    <td><button id="btn-C" class="button">C</button></td>
+                    <td><button id="btn-backspace" class="button"><</button></td>
+                    <td><button id="btn-divider" class="button">/</button></td>
+                    <td><button id="btn-multiplier" class="button">X</button></td>
                 </tr>
                 <tr>
-                    <td><button id="btn-7" class="botao">7</button></td>
-                    <td><button id="btn-8" class="botao">8</button></td>
-                    <td><button id="btn-9" class="botao">9</button></td>
-                    <td><button id="btn-minus" class="botao">-</button></td>
+                    <td><button id="btn-7" class="button">7</button></td>
+                    <td><button id="btn-8" class="button">8</button></td>
+                    <td><button id="btn-9" class="button">9</button></td>
+                    <td><button id="btn-minus" class="button">-</button></td>
                 </tr>
                 <tr>
-                    <td><button id="btn-4" class="botao">4</button></td>
-                    <td><button id="btn-5" class="botao">5</button></td>
-                    <td><button id="btn-6" class="botao">6</button></td>
-                    <td><button id="btn-plus" class="botao">+</button></td>
+                    <td><button id="btn-4" class="button">4</button></td>
+                    <td><button id="btn-5" class="button">5</button></td>
+                    <td><button id="btn-6" class="button">6</button></td>
+                    <td><button id="btn-plus" class="button">+</button></td>
                 </tr>
                 <tr>
-                    <td><button id="btn-1" class="botao">1</button></td>
-                    <td><button id="btn-2" class="botao">2</button></td>
-                    <td><button id="btn-3" class="botao">3</button></td>
-                    <td rowspan="2"><button id="btn-iguals" class="botao" style="height: 106px;">=</button></td>
+                    <td><button id="btn-1" class="button">1</button></td>
+                    <td><button id="btn-2" class="button">2</button></td>
+                    <td><button id="btn-3" class="button">3</button></td>
+                    <td rowspan="2"><button id="btn-iguals" class="button" style="height: 106px;">=</button></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><button id="btn-0" class="botao" style="width: 106px;">0</button></td>
-                    <td><button id="btn-point" class="botao">.</button></td>
+                    <td colspan="2"><button id="btn-0" class="button" style="width: 106px;">0</button></td>
+                    <td><button id="btn-point" class="button">.</button></td>
                 </tr>
             </table>
         </div>
     </div>
 </body>
-<script src="./js/input.js"></script>
+<script src="./js/prepareButtonsAndAddListeners.js"></script>
 <script src="./js/renderButtonsClicked.js"></script>
 <script src="./js/main.js"></script>
 
