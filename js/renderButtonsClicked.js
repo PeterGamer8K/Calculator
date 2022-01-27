@@ -1,12 +1,13 @@
 function renderButtonsClicked() {
+
+
     if (inputs.resultScreen.textContent.length < 13) {
         switch (buttonClicked) {
             case "X":
                 inputs.resultScreen.textContent += "*";
                 break;
             case "=":
-                const resultToCalculate = inputs.resultScreen.textContent;
-                inputs.resultScreen.textContent = eval(resultToCalculate);
+                inputs.resultScreen.textContent = calculateTheExpressionAndReturn();
                 break;
             case "<":
                 break;
@@ -16,7 +17,9 @@ function renderButtonsClicked() {
             default:
                 inputs.resultScreen.textContent += buttonClicked;
         }
-
     }
+}
 
+function calculateTheExpressionAndReturn() {
+    return eval(inputs.resultScreen.textContent);
 }

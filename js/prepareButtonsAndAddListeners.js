@@ -23,7 +23,7 @@ function getTheButtonsInputs() {
     inputs.operators.dividerBtn = $("#btn-divider");
     inputs.operators.multiplierBtn = $("#btn-multiplier");
     inputs.operators.minusBtn = $("#btn-minus");
-    inputs.operators.igualsBtn = $("#btn-iguals");
+    inputs.operators.equalBtn = $("#btn-equal");
     inputs.operators.pointBtn = $("#btn-point");
 
     //Getting the result screen
@@ -52,5 +52,65 @@ function addEventListenersToButtons() {
 //This function is called when the buttons are clicked
 function whenClicked(event) {
     buttonClicked = event.srcElement.firstChild.data;
-    renderButtonsClicked();
+
+    let previousButtonClickedIsOperator;
+    let buttonClickedIsOperator;
+
+    switch (previousButtonClicked) {
+        case "X":
+            previousButtonClickedIsOperator = true;
+            break;
+        case "/":
+            previousButtonClickedIsOperator = true;
+            break;
+        case "+":
+            previousButtonClickedIsOperator = true;
+            break;
+        case "-":
+            previousButtonClickedIsOperator = true;
+            break;
+        case ".":
+            previousButtonClickedIsOperator = true;
+            break;
+        default:
+            previousButtonClickedIsOperator = false;
+            break;
+    }
+
+    switch (buttonClicked) {
+        case "X":
+            buttonClickedIsOperator = true;
+            break;
+        case "/":
+            buttonClickedIsOperator = true;
+            break;
+        case "+":
+            buttonClickedIsOperator = true;
+            break;
+        case "-":
+            buttonClickedIsOperator = true;
+            break;
+        case ".":
+            buttonClickedIsOperator = true;
+            break;
+        default:
+            buttonClickedIsOperator = false;
+            break;
+    }
+
+    if (previousButtonClickedIsOperator) {
+        if (buttonClickedIsOperator) {
+            canWriteOperator = false;
+        } else {
+            canWriteOperator = true;
+        }
+    } else {
+        canWriteOperator = true;
+    }
+    if (canWriteOperator) {
+        renderButtonsClicked();
+        canWriteOperator = true;
+    }
+    previousButtonClicked = buttonClicked;
+
 }
