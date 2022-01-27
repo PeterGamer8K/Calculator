@@ -10,6 +10,7 @@ function renderButtonsClicked() {
                 inputs.resultScreen.textContent = calculateTheExpressionAndReturn();
                 break;
             case "<":
+                deleteLastCharacterInResultDiv();
                 break;
             case "C":
                 inputs.resultScreen.textContent = "";
@@ -22,4 +23,10 @@ function renderButtonsClicked() {
 
 function calculateTheExpressionAndReturn() {
     return eval(inputs.resultScreen.textContent);
+}
+
+
+function deleteLastCharacterInResultDiv() {
+    const resultText = $("#result").textContent;
+    $("#result").textContent = resultText.substring(0, resultText.length - 1);
 }
