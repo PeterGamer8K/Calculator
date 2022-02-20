@@ -1,0 +1,42 @@
+Camadas do app
+
+1- Renderização 
+2- Input
+3- Validação do input
+4- Calculo das expressões
+
+
+1 - Renderização
+	
+	renderizar os botões clicados pelo usuários 
+	renderizar os resultados
+
+
+2 - input
+
+	2 metódos de input:
+		digitar utilizando o teclado numérico 
+		clicando nos botões na tela
+	
+	pegar os elementos HTML e colocar à um objeto
+	adicionar os event listeners à esses elementos
+	
+	mandar os botões clicados quando um operador for digitado para a camada de validação
+
+3 - Validação do input
+
+	validar o resultado vindo da camada do input 
+	não deixar adicionar dois operadores seguidos
+	só permitir colocar um operador se antes vier um número
+	
+	só mandar para a camada do calculo se tiver no máximo 2 argumentos e 1 operador
+	mandar o input validado para a camada que realiza o calculo e para outra que renderiza
+	
+4 - Calculo das expressões
+
+	receber os números e operadores clicados pelo usuário
+	realizar o calculo com no máximo 2 argumentos e 1 operador
+	
+	
+	
+	
