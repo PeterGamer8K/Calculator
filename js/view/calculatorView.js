@@ -1,13 +1,13 @@
 const view = {
     resultDisplay: document.getElementById('result'),
-    canPrint: function() {
-        if (this.resultDisplay.innerHTML.length <= 12) {
+    canPrint: function(messageLength) {
+        if (this.resultDisplay.innerHTML.length + messageLength <= 12) {
             return true;
         }
         return false;
     },
     printInDisplay: function(message) {
-        if (this.canPrint()) {
+        if (this.canPrint(message.length)) {
 
             this.resultDisplay.innerHTML += message;
         }
